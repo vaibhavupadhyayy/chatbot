@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav ChatBot AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <br>
+  <br>
+  <div class="chat-container">
+    <h2>Welcome To Our ChatBot AI</h2>
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+  <script >
+function sendMessage() {
+    var userInput = document.getElementById("user-input").value;
+    if (userInput.trim() === "") return;
+  
+    var chatBox = document.getElementById("chat-box");
+    var userMessage = `<div class="message user-message">${userInput}</div>`;
+    chatBox.innerHTML += userMessage;
+  
+    // Simulate bot response (you can replace this with actual chatbot logic)
+    setTimeout(function() {
+      var botResponse = getBotResponse(userInput);
+      var botMessage = `<div class="message bot-message">${botResponse}</div>`;
+      chatBox.innerHTML += botMessage;
+      chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+    }, 500);
+  
+    document.getElementById("user-input").value = "";
+  }
+  
+  function getBotResponse(userInput) {
+    // Simple logic to return a bot response
+    var responses = [
+      "Welcome to vaibhav chatbot",
+      "Hello! How can I help you?",
+      "What can I assist you with today?",
+      "I'm here to help. What do you need?",
+      "Sorry, I didn't understand that. Can you please rephrase?"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
+  }
+  
+
+  </script>
+</body>
+
+</html>

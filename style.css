@@ -1,0 +1,35 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(221, 199, 199);
+  }
+  
+  .chat-container {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: gainsboro;
+  }
+  
+  .chat-box {
+    color: rgb(11, 86, 248);
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #user-input {
+    width: 60%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 5px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(245, 59, 59);
+  }
+  
